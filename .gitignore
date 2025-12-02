@@ -18,6 +18,11 @@ yarn-error.log*
 *.swo
 *~
 
+# Local documentation (keep for personal reference only)
+CV-IMPROVED.md
+READY-FOR-DEPLOYMENT.md
+VERCEL-DEPLOYMENT.md
+deploy-vercel.bat
 # OS
 .DS_Store
 Thumbs.db
