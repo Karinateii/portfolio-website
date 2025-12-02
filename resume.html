@@ -122,7 +122,7 @@
         
         .cert-list {
             font-size: 13px;
-            line-height: 1.7;
+            line-height: 2;
             column-count: 2;
             column-gap: 20px;
         }
@@ -130,6 +130,25 @@
         .cert-list li {
             list-style: none;
             padding-left: 0;
+            break-inside: avoid;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .download-btn:hover {
+            background: #555;
         }
         
         .summary {
@@ -158,6 +177,10 @@
             .entry-header {
                 flex-direction: column;
             }
+            
+            .cert-list {
+                column-count: 1;
+            }
         }
     </style>
 </head>
@@ -171,13 +194,14 @@
                 <span><a href="https://github.com/Karinateii">github.com/Karinateii</a></span>
                 <span><a href="https://linkedin.com/in/ebenezer-doutimiwei-b929a6208/">LinkedIn</a></span>
             </div>
+            <button class="download-btn" onclick="window.print()">⬇ Download Resume</button>
         </div>
 
         <!-- Professional Summary -->
         <div>
             <div class="section-title">Professional Summary</div>
             <p class="summary">
-                Full-stack software engineer with 2+ years of proven experience delivering enterprise-scale solutions. Expert in .NET/ASP.NET Core, cloud infrastructure (Docker, Kubernetes), and integrating AI/ML capabilities into production systems. Track record of architecting scalable systems, implementing security best practices, and leading successful project deliveries from concept to deployment. Seeking challenging roles where technical excellence drives business impact.
+                <strong>Full-stack software engineer</strong> with <strong>2+ years</strong> of proven experience delivering <strong>enterprise-scale solutions</strong>. Expert in <strong>.NET/ASP.NET Core</strong>, cloud infrastructure (<strong>Docker, Kubernetes</strong>), and integrating <strong>AI/ML capabilities</strong> into production systems. Track record of <strong>architecting scalable systems</strong>, implementing <strong>security best practices</strong>, and leading successful project deliveries from concept to deployment. Seeking challenging roles where technical excellence drives business impact.
             </p>
         </div>
 
@@ -226,11 +250,11 @@
                 </div>
                 <div class="entry-description">
                     <ul>
-                        <li>Architected and deployed 5+ enterprise applications using .NET 8 with clean architecture, securing long-term client contracts and generating sustainable revenue.</li>
-                        <li>Reduced deployment errors by 40% through robust CI/CD implementation with GitHub Actions and Azure DevOps, accelerating release cycles.</li>
-                        <li>Redesigned legacy monolith into microservices architecture, containerized with Docker and orchestrated with Kubernetes for improved scalability.</li>
-                        <li>Implemented enterprise security including JWT authentication, role-based access control, and Azure Active Directory integration across multiple projects.</li>
-                        <li>Integrated ML.NET for intelligent features including predictive analytics and anomaly detection systems.</li>
+                        <li>Architected and deployed <strong>5+ enterprise applications</strong> using <strong>.NET 8</strong> with clean architecture, securing <strong>long-term client contracts</strong> and generating sustainable revenue.</li>
+                        <li>Reduced deployment errors by <strong>40%</strong> through robust <strong>CI/CD implementation</strong> with GitHub Actions and Azure DevOps, accelerating release cycles.</li>
+                        <li>Redesigned legacy monolith into <strong>microservices architecture</strong>, containerized with <strong>Docker</strong> and orchestrated with <strong>Kubernetes</strong> for improved scalability.</li>
+                        <li>Implemented <strong>enterprise security</strong> including <strong>JWT authentication</strong>, role-based access control, and <strong>Azure Active Directory</strong> integration across multiple projects.</li>
+                        <li>Integrated <strong>ML.NET</strong> for intelligent features including predictive analytics and anomaly detection systems.</li>
                     </ul>
                 </div>
             </div>
@@ -245,9 +269,9 @@
                 </div>
                 <div class="entry-description">
                     <ul>
-                        <li>Collaborated with consulting teams on business-critical projects in fast-paced environment, applying agile methodologies and delivering solutions on tight schedules.</li>
-                        <li>Developed strategic thinking and analytical problem-solving skills through structured frameworks and cross-functional collaboration.</li>
-                        <li>Contributed to digital transformation initiatives by analyzing business requirements and translating them into technical solutions.</li>
+                        <li>Collaborated with consulting teams on <strong>business-critical projects</strong> in fast-paced environment, applying <strong>agile methodologies</strong> and delivering solutions on tight schedules.</li>
+                        <li>Developed strategic thinking and <strong>analytical problem-solving</strong> skills through structured frameworks and cross-functional collaboration.</li>
+                        <li>Contributed to <strong>digital transformation initiatives</strong> by analyzing business requirements and translating them into technical solutions.</li>
                     </ul>
                 </div>
             </div>
@@ -262,10 +286,10 @@
                 </div>
                 <div class="entry-description">
                     <ul>
-                        <li>Developed backend modules in C#, optimizing database queries to reduce report generation time by 30% through strategic indexing and caching.</li>
-                        <li>Built responsive user interfaces using jQuery and Bootstrap, integrating with REST APIs for seamless user experience.</li>
-                        <li>Contributed to enterprise solutions emphasizing scalability, performance, and security best practices.</li>
-                        <li>Participated in code reviews and mentored junior developers on clean code principles and design patterns.</li>
+                        <li>Developed backend modules in <strong>C#</strong>, optimizing database queries to <strong>reduce report generation time by 30%</strong> through strategic indexing and caching.</li>
+                        <li>Built responsive user interfaces using <strong>jQuery</strong> and <strong>Bootstrap</strong>, integrating with <strong>REST APIs</strong> for seamless user experience.</li>
+                        <li>Contributed to enterprise solutions emphasizing <strong>scalability, performance</strong>, and <strong>security best practices</strong>.</li>
+                        <li>Participated in code reviews and mentored junior developers on <strong>clean code principles</strong> and design patterns.</li>
                     </ul>
                 </div>
             </div>
@@ -278,21 +302,21 @@
             <div class="entry">
                 <div class="entry-title">SmartHub - Enterprise Web API</div>
                 <div class="entry-description">
-                    Production-ready RESTful API built with clean architecture. Features JWT authentication with refresh tokens, role-based authorization, comprehensive xUnit test coverage, and automated GitHub Actions CI/CD pipeline. Docker-ready and fully documented.
+                    Production-ready <strong>RESTful API</strong> built with <strong>clean architecture</strong>. Features <strong>JWT authentication</strong> with refresh tokens, <strong>role-based authorization</strong>, comprehensive <strong>xUnit test coverage</strong>, and automated <strong>GitHub Actions CI/CD</strong> pipeline. Docker-ready and fully documented.
                 </div>
             </div>
             
             <div class="entry">
                 <div class="entry-title">Global Disaster Management System</div>
                 <div class="entry-description">
-                    Enterprise platform with ML.NET-powered disaster prediction engine. Includes real-time alerts via SignalR, multi-channel messaging (SMS/WhatsApp/IVR) through Twilio, IoT sensor integration, and emergency shelter management. Deployed with Docker and Kubernetes.
+                    Enterprise platform with <strong>ML.NET-powered disaster prediction</strong> engine. Includes <strong>real-time alerts via SignalR</strong>, <strong>multi-channel messaging</strong> (SMS/WhatsApp/IVR) through Twilio, <strong>IoT sensor integration</strong>, and emergency shelter management. Deployed with <strong>Docker and Kubernetes</strong>.
                 </div>
             </div>
             
             <div class="entry">
                 <div class="entry-title">Change Management System</div>
                 <div class="entry-description">
-                    Enterprise web application with role-based authorization, approval workflows, audit trails, and security measures. Built with ASP.NET Core 6 and currently serving real organizational users.
+                    Enterprise web application with <strong>role-based authorization</strong>, <strong>approval workflows</strong>, <strong>audit trails</strong>, and security measures. Built with <strong>ASP.NET Core 6</strong> and currently serving real organizational users.
                 </div>
             </div>
         </div>
@@ -310,13 +334,13 @@
         <div>
             <div class="section-title">Certifications</div>
             <ul class="cert-list">
-                <li>Kubernetes and Cloud Native Associate (KCNA) - Linux Foundation, 2025</li>
-                <li>Microsoft Certified C# Developer - Microsoft, 2023</li>
-                <li>Deloitte Data Analytics Job Simulation - Deloitte, 2025</li>
-                <li>ASP.NET Core Web Development - Udemy, 2023</li>
-                <li>Oracle SQL & Database Administration - New Horizons, 2023</li>
-                <li>CompTIA A+ & Security+ - New Horizons, 2023</li>
-                <li>Java & Android Development - New Horizons, 2023</li>
+                <li><strong>Kubernetes and Cloud Native Associate (KCNA)</strong> - Linux Foundation, 2025</li>
+                <li><strong>Microsoft Certified C# Developer</strong> - Microsoft, 2023</li>
+                <li><strong>Deloitte Data Analytics Job Simulation</strong> - Deloitte, 2025</li>
+                <li><strong>ASP.NET Core Web Development</strong> - Udemy, 2023</li>
+                <li><strong>Oracle SQL & Database Administration</strong> - New Horizons, 2023</li>
+                <li><strong>CompTIA A+ & Security+</strong> - New Horizons, 2023</li>
+                <li><strong>Java & Android Development</strong> - New Horizons, 2023</li>
             </ul>
         </div>
     </div>
