@@ -1430,19 +1430,41 @@ button {
     
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
     
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
+        word-wrap: break-word;
     }
     
     .hero-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        word-wrap: break-word;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     
     .about-content {
         grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        position: relative;
+        top: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .profile-picture-container {
+        width: 180px;
+        height: 180px;
     }
     
     .skills-grid {
