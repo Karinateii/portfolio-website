@@ -410,6 +410,16 @@ button {
     overflow-x: hidden;
 }
 
+.hero-text {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .hero-greeting {
     font-size: 1.25rem;
     color: var(--primary-color);
@@ -450,11 +460,14 @@ button {
     gap: 1rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .hero-social {
     display: flex;
     gap: 1rem;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -483,6 +496,8 @@ button {
     overflow: hidden;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color);
+    max-width: 100%;
+    width: 100%;
 }
 
 .code-window-header {
@@ -520,10 +535,14 @@ button {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.875rem;
     line-height: 1.8;
+    overflow-x: auto;
+    max-width: 100%;
 }
 
 .code-window-body pre {
     margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .code-keyword { color: #c792ea; }
@@ -1462,6 +1481,20 @@ button {
     .hero {
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    
+    .code-window {
+        max-width: 100%;
     }
     
     .about-content {
