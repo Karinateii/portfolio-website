@@ -29,7 +29,16 @@
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/index.min.js"></script>
     <script>
-        emailjs.init('2uP5or8Q-kTqriCRU');
+        // Wait for EmailJS to load, then initialize
+        function initEmailJS() {
+            if (typeof emailjs !== 'undefined') {
+                emailjs.init('2uP5or8Q-kTqriCRU');
+                console.log('EmailJS initialized');
+            } else {
+                setTimeout(initEmailJS, 100);
+            }
+        }
+        initEmailJS();
     </script>
     
     <!-- Styles -->

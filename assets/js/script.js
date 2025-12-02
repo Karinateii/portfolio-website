@@ -188,6 +188,12 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Check if emailjs is ready
+        if (typeof emailjs === 'undefined') {
+            alert('Email service is loading. Please try again in a moment.');
+            return;
+        }
+        
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
