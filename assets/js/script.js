@@ -179,24 +179,19 @@ filterButtons.forEach(button => {
 });
 
 // ================================
-// CONTACT FORM - Formspree
+// CONTACT FORM - Simple mailto
 // ================================
 const contactForm = document.getElementById('contact-form');
-const formSuccess = document.getElementById('form-success');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        // Disable button during submission
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
         
-        // Re-enable after 3 seconds (Formspree will redirect)
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-        }, 3000);
+        window.location.href = `mailto:karinateidoutimiwei@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
     });
 }
 
