@@ -279,10 +279,13 @@ button {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .section {
     padding: var(--section-padding);
+    overflow-x: hidden;
 }
 
 .section-header {
@@ -403,6 +406,8 @@ button {
     align-items: center;
     position: relative;
     z-index: 1;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .hero-greeting {
@@ -410,6 +415,7 @@ button {
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 0.5rem;
+    max-width: 100%;
 }
 
 .hero-title {
@@ -417,6 +423,8 @@ button {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .hero-subtitle {
@@ -424,6 +432,8 @@ button {
     font-weight: 600;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .hero-description {
@@ -431,6 +441,8 @@ button {
     color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: 2rem;
+    max-width: 100%;
+    overflow-wrap: break-word;
 }
 
 .hero-cta {
@@ -1494,7 +1506,26 @@ button {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
+        line-height: 1.2;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    
+    .hero-greeting {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.95rem;
+        overflow-wrap: break-word;
     }
     
     .hero-cta {
@@ -1518,6 +1549,29 @@ button {
     
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Extra small devices (iPhone SE, etc.) */
+@media (max-width: 400px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-greeting {
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
     }
 }
 
