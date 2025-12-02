@@ -190,6 +190,39 @@
             font-weight: 600;
         }
         
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+            border-left: 3px solid #6366f1;
+        }
+        
+        .cert-badge {
+            font-size: 1.5rem;
+            color: #6366f1;
+        }
+        
+        .cert-item h4 {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+        
+        .cert-item p {
+            font-size: 0.85rem;
+            color: #777;
+        }
+        
         .buttons {
             display: flex;
             gap: 1rem;
@@ -264,7 +297,7 @@
     <div class="resume-container">
         <div class="resume-header">
             <h1>Ebenezer Doutimiwei</h1>
-            <div class="title">Full-Stack Software Engineer</div>
+            <div class="title">Software Engineer | AI/ML Enthusiast</div>
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -289,11 +322,12 @@
                     Professional Summary
                 </h2>
                 <p class="summary">
-                    Results-driven Full-Stack Software Engineer with expertise in building scalable enterprise applications 
-                    using the .NET ecosystem. Specialized in developing secure RESTful APIs, implementing clean architecture 
-                    patterns, and creating robust backend systems. Proven track record of delivering high-quality solutions 
-                    with strong emphasis on security best practices, automated testing, and modern development workflows. 
-                    Passionate about writing maintainable code and solving complex technical challenges.
+                    Results-driven Software Engineer with over 2 years of experience designing and deploying scalable applications. 
+                    Proficient in <strong>C#, Python</strong>, and <strong>cloud-native technologies</strong> with expertise in 
+                    containerization, CI/CD automation, and <strong>machine learning integration</strong>. Demonstrated success in 
+                    delivering secure, efficient, and modular solutions for enterprise and freelance projects. Adept at working in 
+                    agile teams and translating business needs into technical solutions. Passionate about <strong>AI/ML</strong> and 
+                    building intelligent, scalable systems.
                 </p>
             </div>
             
@@ -305,87 +339,148 @@
                 </h2>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h4>Backend Development</h4>
+                        <h4><i class="fas fa-laptop-code"></i> Languages</h4>
                         <ul class="skill-list">
-                            <li>C# & .NET 6/8</li>
-                            <li>ASP.NET Core Web API</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4><i class="fas fa-brain"></i> AI/ML & Data Analysis</h4>
+                        <ul class="skill-list">
+                            <li>ML.NET</li>
+                            <li>scikit-learn</li>
+                            <li>Pandas & NumPy</li>
+                            <li>Jupyter Notebooks</li>
+                            <li>Data Analytics</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
+                        <ul class="skill-list">
+                            <li>Docker & Kubernetes</li>
+                            <li>Azure Cloud</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>GitHub Actions</li>
+                            <li>Azure DevOps</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4><i class="fas fa-database"></i> Databases</h4>
+                        <ul class="skill-list">
+                            <li>Microsoft SQL Server</li>
+                            <li>Oracle Database</li>
+                            <li>MySQL</li>
                             <li>Entity Framework Core</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4><i class="fas fa-server"></i> Backend Development</h4>
+                        <ul class="skill-list">
+                            <li>.NET 6/8</li>
+                            <li>ASP.NET Core Web API</li>
                             <li>RESTful API Design</li>
-                            <li>LINQ & Lambda Expressions</li>
+                            <li>Microservices</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
-                        <h4>Database & ORM</h4>
-                        <ul class="skill-list">
-                            <li>SQL Server & T-SQL</li>
-                            <li>Database Design & Normalization</li>
-                            <li>EF Core Migrations</li>
-                            <li>Query Optimization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Frontend Development</h4>
-                        <ul class="skill-list">
-                            <li>HTML5, CSS3, JavaScript (ES6+)</li>
-                            <li>Bootstrap & Responsive Design</li>
-                            <li>jQuery & AJAX</li>
-                            <li>Chart.js & Data Visualization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Architecture & Patterns</h4>
-                        <ul class="skill-list">
-                            <li>Clean Architecture</li>
-                            <li>MVC Pattern</li>
-                            <li>Repository & Unit of Work</li>
-                            <li>Dependency Injection</li>
-                            <li>SOLID Principles</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Security & Authentication</h4>
+                        <h4><i class="fas fa-lock"></i> Security & Auth</h4>
                         <ul class="skill-list">
                             <li>JWT Authentication</li>
-                            <li>ASP.NET Core Identity</li>
-                            <li>Role-Based Authorization</li>
-                            <li>Password Hashing (BCrypt)</li>
-                            <li>Security Best Practices</li>
+                            <li>Azure Active Directory</li>
+                            <li>ASP.NET Identity</li>
+                            <li>BCrypt Hashing</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
-                        <h4>DevOps & Tools</h4>
+                        <h4><i class="fas fa-cogs"></i> Practices</h4>
                         <ul class="skill-list">
-                            <li>Git & GitHub</li>
-                            <li>GitHub Actions (CI/CD)</li>
-                            <li>Docker & Containerization</li>
-                            <li>Visual Studio / VS Code</li>
-                            <li>Swagger/OpenAPI</li>
-                            <li>Postman</li>
+                            <li>Clean Architecture</li>
+                            <li>SOLID Principles</li>
+                            <li>Agile/Scrum</li>
+                            <li>Unit Testing (xUnit)</li>
+                            <li>REST APIs</li>
                         </ul>
                     </div>
                     
                     <div class="skill-category">
-                        <h4>Testing & Quality</h4>
-                        <ul class="skill-list">
-                            <li>xUnit Testing Framework</li>
-                            <li>Integration Testing</li>
-                            <li>Unit Testing</li>
-                            <li>FluentValidation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4>Additional Technologies</h4>
+                        <h4><i class="fas fa-tools"></i> Additional Tech</h4>
                         <ul class="skill-list">
                             <li>SignalR (Real-time)</li>
-                            <li>ML.NET (Machine Learning)</li>
-                            <li>Serilog (Logging)</li>
-                            <li>Twilio API Integration</li>
+                            <li>Unity Game Engine</li>
+                            <li>jQuery & Bootstrap</li>
+                            <li>Twilio API</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Professional Experience -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Professional Experience
+                </h2>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Freelance Software Developer</div>
+                            <div class="item-company">Remote</div>
+                        </div>
+                        <div class="item-date">Nov 2023 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Implemented enterprise-grade authentication via <strong>Azure Active Directory</strong> for client applications</li>
+                            <li>Refactored legacy monoliths into microservices, containerized with <strong>Docker</strong> and orchestrated with <strong>Kubernetes</strong></li>
+                            <li>Applied CI/CD workflows, reducing deployment errors by <strong>40%</strong> and enabling faster delivery</li>
+                            <li>Built scalable backend systems with <strong>.NET 8</strong>, integrating <strong>ML.NET</strong> for intelligent features</li>
+                            <li>Collaborated with international clients to deliver custom enterprise solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Forward Intern Programme</div>
+                            <div class="item-company">McKinsey & Company</div>
+                        </div>
+                        <div class="item-date">Jun 2023 - Nov 2023</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Collaborated on business-critical projects, applying <strong>agile frameworks</strong> to deliver innovative solutions</li>
+                            <li>Improved team efficiency through structured problem-solving and communication</li>
+                            <li>Contributed to strategic initiatives focused on digital transformation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Junior .NET Developer</div>
+                            <div class="item-company">Definitive Track Solutions</div>
+                        </div>
+                        <div class="item-date">Jan 2022 - Dec 2022</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Built backend modules in <strong>C#</strong> and optimized SQL queries, cutting report generation time by <strong>30%</strong></li>
+                            <li>Developed frontend interactions using <strong>jQuery</strong> and <strong>REST APIs</strong> to enhance usability</li>
+                            <li>Contributed to enterprise-level software solutions with focus on scalability and performance</li>
+                            <li>Participated in code reviews and implemented best practices for clean code</li>
                         </ul>
                     </div>
                 </div>
@@ -404,7 +499,6 @@
                             <div class="item-title">SmartHub - Enterprise Web API</div>
                             <div class="item-company">Personal Project</div>
                         </div>
-                        <div class="item-date">Nov 2025 - Present</div>
                     </div>
                     <div class="item-description">
                         <p>Production-ready RESTful API built with Clean Architecture principles, featuring comprehensive security measures and modern development practices.</p>
@@ -414,7 +508,6 @@
                             <li>Integrated rate limiting on sensitive endpoints and BCrypt password hashing for enhanced security</li>
                             <li>Created comprehensive test suite with xUnit (unit and integration tests)</li>
                             <li>Established CI/CD pipeline with GitHub Actions for automated builds and testing</li>
-                            <li>Implemented structured logging with Serilog and health check endpoints</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">.NET 8</span>
@@ -423,7 +516,7 @@
                             <span class="tech-tag">SQL Server</span>
                             <span class="tech-tag">JWT</span>
                             <span class="tech-tag">xUnit</span>
-                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">Docker</span>
                         </div>
                     </div>
                 </div>
@@ -432,29 +525,26 @@
                     <div class="item-header">
                         <div>
                             <div class="item-title">Global Disaster Management System</div>
-                            <div class="item-company">Academic Final Year Project - Babcock University</div>
+                            <div class="item-company">Academic Final Year Project</div>
                         </div>
-                        <div class="item-date">2024 - 2025</div>
                     </div>
                     <div class="item-description">
-                        <p>Comprehensive emergency response platform supporting multiple disaster types with real-time communications and ML predictions.</p>
+                        <p>Comprehensive emergency response platform with <strong>ML.NET machine learning predictions</strong> for disaster risk assessment. Features real-time alerts, IoT integration, and multi-channel communications.</p>
                         <ul>
-                            <li>Developed multi-disaster support system (floods, earthquakes, fires, hurricanes, tsunamis)</li>
+                            <li>Developed ML-powered disaster risk prediction using Fast Tree classifier</li>
                             <li>Implemented real-time alert system using SignalR for instant notifications</li>
-                            <li>Integrated ML.NET for disaster risk prediction using Fast Tree classifier</li>
                             <li>Built multi-channel communication system (SMS, WhatsApp, USSD, Voice/IVR) via Twilio</li>
                             <li>Created IoT sensor integration for water level monitoring and weather tracking</li>
                             <li>Designed emergency shelter management with real-time capacity tracking</li>
-                            <li>Implemented multi-language support for 8 languages</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">ASP.NET Core 8</span>
-                            <span class="tech-tag">SignalR</span>
                             <span class="tech-tag">ML.NET</span>
-                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">SignalR</span>
+                            <span class="tech-tag">Python</span>
                             <span class="tech-tag">Twilio API</span>
-                            <span class="tech-tag">Chart.js</span>
                             <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Kubernetes</span>
                         </div>
                     </div>
                 </div>
@@ -465,16 +555,13 @@
                             <div class="item-title">Change Management System</div>
                             <div class="item-company">Personal Project</div>
                         </div>
-                        <div class="item-date">2024</div>
                     </div>
                     <div class="item-description">
                         <p>Secure enterprise web application for managing organizational change requests with comprehensive security measures.</p>
                         <ul>
                             <li>Implemented role-based authorization with Admin and Employee roles</li>
                             <li>Designed approval workflow system with status tracking and audit trails</li>
-                            <li>Integrated SMTP-based email notifications for status changes</li>
                             <li>Applied security best practices including CSRF protection and security headers</li>
-                            <li>Implemented structured logging with Serilog for monitoring and debugging</li>
                             <li>Created responsive UI with Bootstrap 5 and DataTables integration</li>
                         </ul>
                         <div class="tech-tags">
@@ -483,7 +570,6 @@
                             <span class="tech-tag">Identity</span>
                             <span class="tech-tag">SQL Server</span>
                             <span class="tech-tag">Bootstrap 5</span>
-                            <span class="tech-tag">Serilog</span>
                         </div>
                     </div>
                 </div>
@@ -494,15 +580,12 @@
                             <div class="item-title">Laboratory Inventory Management System</div>
                             <div class="item-company">Personal Project</div>
                         </div>
-                        <div class="item-date">2024</div>
                     </div>
                     <div class="item-description">
                         <p>Complete inventory management solution for laboratory supplies with purchase order tracking and stock management.</p>
                         <ul>
                             <li>Built comprehensive inventory tracking with quantity monitoring and reorder alerts</li>
                             <li>Implemented purchase order system with partial fulfillment support</li>
-                            <li>Designed supplier management module with contact tracking</li>
-                            <li>Integrated image upload functionality for product documentation</li>
                             <li>Applied Repository Pattern and Unit of Work for data access</li>
                             <li>Created responsive UI with AJAX operations and DataTables</li>
                         </ul>
@@ -512,7 +595,31 @@
                             <span class="tech-tag">EF Core</span>
                             <span class="tech-tag">SQL Server</span>
                             <span class="tech-tag">jQuery</span>
-                            <span class="tech-tag">DataTables</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Autonomous Flappy Bird AI</div>
+                            <div class="item-company">Personal Project</div>
+                        </div>
+                    </div>
+                    <div class="item-description">
+                        <p>Unity-based recreation of Flappy Bird with <strong>autonomous AI mode</strong>. Features intelligent pathfinding, dynamic pipe detection, and adaptive learning.</p>
+                        <ul>
+                            <li>Implemented autonomous AI agent with pathfinding and obstacle avoidance</li>
+                            <li>Developed adaptive learning system for optimal gameplay</li>
+                            <li>Built dynamic pipe detection with real-time navigation</li>
+                            <li>Created both manual control and AI autonomous modes</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">C#</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Game Development</span>
+                            <span class="tech-tag">Physics</span>
                         </div>
                     </div>
                 </div>
@@ -523,66 +630,136 @@
                             <div class="item-title">CAMANDA Academy Payment Tracker</div>
                             <div class="item-company">Client Project - Live Production</div>
                         </div>
-                        <div class="item-date">2024</div>
                     </div>
                     <div class="item-description">
-                        <p>Professional payment tracking web application with zero dependencies, deployed on GitHub Pages.</p>
+                        <p>Professional payment tracking web application deployed on GitHub Pages.</p>
                         <ul>
                             <li>Built vanilla JavaScript application with localStorage persistence</li>
                             <li>Implemented real-time statistics dashboard and CSV export functionality</li>
-                            <li>Created advanced search and filtering across all payment fields</li>
-                            <li>Designed modern, gradient-based UI with smooth animations</li>
                             <li>Achieved 100% responsive design for mobile, tablet, and desktop</li>
                         </ul>
                         <div class="tech-tags">
                             <span class="tech-tag">HTML5</span>
                             <span class="tech-tag">CSS3</span>
                             <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">localStorage</span>
                             <span class="tech-tag">GitHub Pages</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Education -->
+            <!-- Education & Certifications -->
             <div class="section">
                 <h2 class="section-title">
                     <i class="fas fa-graduation-cap"></i>
-                    Education
+                    Education & Certifications
                 </h2>
+                
                 <div class="education-item">
                     <div class="degree">Bachelor of Science in Computer Science</div>
-                    <div class="institution">Babcock University</div>
-                    <div class="item-date">2021 - 2025</div>
+                    <div class="institution">Babcock University, Nigeria</div>
+                    <div class="item-date">2019 - 2023</div>
                     <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                        <li>Final Year Project: Global Disaster Management System</li>
-                        <li>Relevant Coursework: Software Engineering, Database Systems, Web Development, Data Structures & Algorithms</li>
+                        <li>Final Year Project: Global Disaster Management System with ML.NET</li>
+                        <li>Relevant Coursework: Software Engineering, Database Systems, AI, Data Structures & Algorithms</li>
                     </ul>
                 </div>
-            </div>
-            
-            <!-- Professional Development -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-certificate"></i>
-                    Professional Development
-                </h2>
-                <ul style="margin-left: 1.5rem;">
-                    <li>Self-taught .NET Developer with focus on modern web development practices</li>
-                    <li>Active contributor to open-source projects on GitHub</li>
-                    <li>Continuous learner through Microsoft Learn, Pluralsight, and technical documentation</li>
-                    <li>Practice problem-solving on coding platforms and technical challenges</li>
-                </ul>
+                
+                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #6366f1;">
+                    <i class="fas fa-certificate"></i> Professional Certifications
+                </h3>
+                
+                <div class="certifications-grid">
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <h4>Kubernetes and Cloud Native Associate (KCNA)</h4>
+                            <p>Linux Foundation - 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div>
+                            <h4>Microsoft Certified C# Developer</h4>
+                            <p>Microsoft - 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div>
+                            <h4>Deloitte Data Analytics Job Simulation</h4>
+                            <p>Deloitte - 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div>
+                            <h4>ASP.NET Core Web Development</h4>
+                            <p>Udemy - 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div>
+                            <h4>Oracle SQL & Database Administration</h4>
+                            <p>New Horizons - 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div>
+                            <h4>CompTIA A+ & Security+</h4>
+                            <p>New Horizons - 2023</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                        <div class="cert-badge">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <div>
+                            <h4>Java & Android Development</h4>
+                            <p>New Horizons - 2023</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- Additional Information -->
             <div class="section">
                 <h2 class="section-title">
-                    <i class="fas fa-info-circle"></i>
-                    Additional Information
+                    <i class="fas fa-heart"></i>
+                    Interests & Professional Development
                 </h2>
                 <div class="skills-grid">
+                    <div>
+                        <h4>Areas of Interest</h4>
+                        <ul class="skill-list">
+                            <li>Artificial Intelligence & Machine Learning</li>
+                            <li>Cloud-Native Architecture</li>
+                            <li>AI Agent Development</li>
+                            <li>Microservices & System Design</li>
+                            <li>DevOps & CI/CD Automation</li>
+                            <li>Game Development with AI</li>
+                        </ul>
+                    </div>
                     <div>
                         <h4>Languages</h4>
                         <ul class="skill-list">
@@ -595,15 +772,6 @@
                             <li>Open to Remote Work</li>
                             <li>Open to On-site Opportunities</li>
                             <li>Available for Relocation</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Interests</h4>
-                        <ul class="skill-list">
-                            <li>Cloud Technologies (Azure, AWS)</li>
-                            <li>Microservices Architecture</li>
-                            <li>DevOps Practices</li>
-                            <li>System Design</li>
                         </ul>
                     </div>
                 </div>
