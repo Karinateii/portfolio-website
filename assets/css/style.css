@@ -523,9 +523,9 @@ button {
 /* Profile Picture */
 .profile-picture-container {
     position: relative;
-    width: 250px;
-    height: 250px;
-    margin: 0 auto 2rem;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
     border-radius: 50%;
     padding: 4px;
     background: var(--gradient-primary);
@@ -650,9 +650,16 @@ button {
    ================================ */
 .about-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 300px 1fr 1fr;
+    gap: 3rem;
     align-items: start;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 100px;
 }
 
 .about-intro {
