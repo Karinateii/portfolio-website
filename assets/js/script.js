@@ -1,8 +1,22 @@
 // ================================
 // EMAILJS INITIALIZATION
 // ================================
-if (typeof emailjs !== 'undefined') {
-    emailjs.init('bDo5JjM0TI2PpPFhh');
+// Wait for EmailJS library to load, then initialize
+function initializeEmailJS() {
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('bDo5JjM0TI2PpPFhh');
+        console.log('EmailJS initialized successfully');
+    } else {
+        console.warn('EmailJS library not loaded, retrying...');
+        setTimeout(initializeEmailJS, 500); // Retry after 500ms
+    }
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeEmailJS);
+} else {
+    initializeEmailJS();
 }
 
 // ================================
@@ -194,6 +208,12 @@ const formSuccess = document.getElementById('form-success');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
+        
+        // Check if EmailJS is loaded
+        if (typeof emailjs === 'undefined') {
+            alert('Email service is loading. Please try again in a moment.');
+            return;
+        }
         
         // Disable submit button to prevent double submission
         const submitBtn = contactForm.querySelector('button[type="submit"]');
