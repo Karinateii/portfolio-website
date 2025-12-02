@@ -866,6 +866,22 @@ button {
     width: var(--progress);
 }
 
+/* Mobile skills fix */
+@media (max-width: 768px) {
+    .skill-progress.animate {
+        animation: progressLoad 1s ease-out forwards;
+    }
+}
+
+@keyframes progressLoad {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--progress);
+    }
+}
+
 /* Tech Icons */
 .tech-icons {
     margin-top: 4rem;
