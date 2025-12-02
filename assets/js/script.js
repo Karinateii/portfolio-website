@@ -1,25 +1,4 @@
 // ================================
-// EMAILJS INITIALIZATION
-// ================================
-// Wait for EmailJS library to load, then initialize
-function initializeEmailJS() {
-    if (typeof emailjs !== 'undefined') {
-        emailjs.init('bDo5JjM0TI2PpPFhh');
-        console.log('EmailJS initialized successfully');
-    } else {
-        console.warn('EmailJS library not loaded, retrying...');
-        setTimeout(initializeEmailJS, 500); // Retry after 500ms
-    }
-}
-
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeEmailJS);
-} else {
-    initializeEmailJS();
-}
-
-// ================================
 // LOADING SCREEN
 // ================================
 window.addEventListener('load', () => {
@@ -200,67 +179,24 @@ filterButtons.forEach(button => {
 });
 
 // ================================
-// CONTACT FORM
+// CONTACT FORM - Formspree
 // ================================
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Check if EmailJS is loaded
-        if (typeof emailjs === 'undefined') {
-            alert('Email service is loading. Please try again in a moment.');
-            return;
-        }
-        
-        // Disable submit button to prevent double submission
+        // Disable button during submission
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-        
-        // EmailJS parameters
-        const templateParams = {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: message,
-            reply_to: email
-        };
-        
-        // Send email using EmailJS
-        emailjs.send('service_691uxh3', 'template_contact_form', templateParams)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                
-                // Show success message
-                contactForm.style.display = 'none';
-                formSuccess.classList.add('show');
-                
-                // Reset form and hide success message after 5 seconds
-                setTimeout(() => {
-                    contactForm.reset();
-                    contactForm.style.display = 'block';
-                    formSuccess.classList.remove('show');
-                    submitBtn.disabled = false;
-                    submitBtn.innerHTML = originalText;
-                }, 5000);
-            })
-            .catch((error) => {
-                console.log('FAILED...', error);
-                alert('Failed to send message. Please try again or contact directly at karinateidoutimiwei@gmail.com');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            });
+        // Re-enable after 3 seconds (Formspree will redirect)
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }, 3000);
     });
 }
 
