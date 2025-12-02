@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ebenezer Doutimiwei - Full-Stack Software Engineer specializing in .NET, ASP.NET Core, and modern web development">
+    <meta name="keywords" content="Software Engineer, Full-Stack Developer, .NET Developer, ASP.NET Core, C#, Web Development">
+    <meta name="author" content="Ebenezer Doutimiwei">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ebenezer Doutimiwei - Full-Stack Software Engineer">
+    <meta property="og:description" content="Building scalable, secure enterprise applications with .NET and modern web technologies">
+    <meta property="og:image" content="./assets/images/portfolio-preview.png">
+    
+    <title>Ebenezer Doutimiwei | Full-Stack Software Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-inner">
+                <div class="loader-line-wrap">
+                    <div class="loader-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">ED</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="./resume.html" class="btn btn-primary btn-resume" target="_blank">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
+            </div>
+            
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting" data-aos="fade-up">Hi, I'm</p>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        Ebenezer <span class="gradient-text">Doutimiwei</span>
+                    </h1>
+                    <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Full-Stack Software Engineer
+                    </h2>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+                        I build scalable, secure, and user-centric enterprise applications using 
+                        <span class="highlight">.NET</span>, <span class="highlight">ASP.NET Core</span>, 
+                        and modern web technologies. Passionate about clean architecture, 
+                        best practices, and creating impactful solutions.
+                    </p>
+                    
+                    <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
+                        <a href="#projects" class="btn btn-primary btn-large">
+                            <i class="fas fa-code"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary btn-large">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                    </div>
+                    
+                    <div class="hero-social" data-aos="fade-up" data-aos-delay="500">
+                        <a href="https://github.com/Karinateii" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:karinateidoutimiwei@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image" data-aos="fade-left" data-aos-delay="600">
+                    <div class="code-window">
+                        <div class="code-window-header">
+                            <div class="code-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="code-title">Program.cs</span>
+                        </div>
+                        <div class="code-window-body">
+                            <pre><code class="language-csharp"><span class="code-keyword">public class</span> <span class="code-class">Developer</span>
+{
+    <span class="code-keyword">public string</span> Name => <span class="code-string">"Ebenezer"</span>;
+    <span class="code-keyword">public string[]</span> Skills => <span class="code-keyword">new</span>[]
+    {
+        <span class="code-string">".NET"</span>, <span class="code-string">"C#"</span>, <span class="code-string">"ASP.NET Core"</span>,
+        <span class="code-string">"SQL Server"</span>, <span class="code-string">"JavaScript"</span>,
+        <span class="code-string">"Clean Architecture"</span>
+    };
+    
+    <span class="code-keyword">public void</span> <span class="code-function">BuildAmazingThings</span>()
+    {
+        <span class="code-comment">// Creating impact, one line at a time</span>
+        Console.WriteLine(<span class="code-string">"Let's build something great!"</span>);
+    }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="scroll-arrows">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Get To Know Me</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p class="about-intro">
+                        I'm a passionate <strong>Full-Stack Software Engineer</strong> with expertise in building 
+                        enterprise-grade applications using the <strong>.NET ecosystem</strong>. My journey in software 
+                        development has been driven by curiosity, continuous learning, and a commitment to excellence.
+                    </p>
+                    
+                    <p>
+                        I specialize in developing <strong>scalable backend systems</strong>, <strong>RESTful APIs</strong>, 
+                        and <strong>full-stack web applications</strong> using modern technologies. My approach emphasizes 
+                        <strong>clean architecture</strong>, <strong>security best practices</strong>, and 
+                        <strong>maintainable code</strong> that stands the test of time.
+                    </p>
+                    
+                    <p>
+                        From disaster management systems to inventory tracking platforms, I've worked on diverse projects 
+                        that solve real-world problems. I'm particularly interested in <strong>cloud technologies</strong>, 
+                        <strong>microservices architecture</strong>, and <strong>DevOps practices</strong>.
+                    </p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Computer Science Graduate</p>
+                                <p class="text-muted">Babcock University</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Available for Remote & On-site</p>
+                                <p class="text-muted">Open to relocation</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Focus Areas</h4>
+                                <p>Backend Development, APIs</p>
+                                <p class="text-muted">Full-Stack Engineering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="10">0</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="500">0</h3>
+                        <p class="stat-label">GitHub Commits</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="15">0</h3>
+                        <p class="stat-label">Technologies Mastered</p>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-coffee"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="1000">0</h3>
+                        <p class="stat-label">Cups of Coffee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">My Arsenal</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="section-description">
+                    Technologies and tools I use to bring ideas to life
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Backend -->
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C# & .NET 6/8</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">ASP.NET Core</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Entity Framework Core</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">RESTful APIs</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Database -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Database & ORM</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">SQL Server</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">T-SQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="78"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Database Design</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Frontend -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript (ES6+)</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5 & CSS3</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap & Responsive Design</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">jQuery & AJAX</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Architecture & Patterns -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-sitemap"></i>
+                        <h3>Architecture & Patterns</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Clean Architecture</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MVC Pattern</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Repository Pattern</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Dependency Injection</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & DevOps -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & DevOps</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">GitHub Actions (CI/CD)</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Visual Studio / VS Code</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Security & Testing -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security & Testing</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JWT Authentication</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">ASP.NET Identity</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="82"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">xUnit Testing</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Security Best Practices</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tech Stack Icons -->
+            <div class="tech-icons" data-aos="fade-up">
+                <h3 class="tech-icons-title">Technologies I Work With</h3>
+                <div class="tech-icons-grid">
+                    <div class="tech-icon" title="C#">
+                        <i class="devicon-csharp-plain"></i>
+                        <span>C#</span>
+                    </div>
+                    <div class="tech-icon" title=".NET">
+                        <i class="devicon-dot-net-plain"></i>
+                        <span>.NET</span>
+                    </div>
+                    <div class="tech-icon" title="SQL Server">
+                        <i class="fas fa-database"></i>
+                        <span>SQL Server</span>
+                    </div>
+                    <div class="tech-icon" title="JavaScript">
+                        <i class="devicon-javascript-plain"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-icon" title="HTML5">
+                        <i class="devicon-html5-plain"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-icon" title="CSS3">
+                        <i class="devicon-css3-plain"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-icon" title="Bootstrap">
+                        <i class="devicon-bootstrap-plain"></i>
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="tech-icon" title="Git">
+                        <i class="devicon-git-plain"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tech-icon" title="Docker">
+                        <i class="devicon-docker-plain"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tech-icon" title="Visual Studio">
+                        <i class="devicon-visualstudio-plain"></i>
+                        <span>VS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-description">
+                    A showcase of my best work - from enterprise applications to open-source contributions
+                </p>
+            </div>
+            
+            <!-- Project Filters -->
+            <div class="project-filters" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="enterprise">Enterprise</button>
+                <button class="filter-btn" data-filter="api">APIs</button>
+                <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1: SmartHub -->
+                <div class="project-card featured" data-category="enterprise api" data-aos="fade-up">
+                    <div class="project-badge">Featured</div>
+                    <div class="project-image">
+                        <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/DotNet.svg" alt="SmartHub API">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Karinateii/SmartHub" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">SmartHub - Enterprise Web API</h3>
+                            <span class="project-type">Backend • API</span>
+                        </div>
+                        <p class="project-description">
+                            Production-ready RESTful API built with .NET 8 following Clean Architecture principles. 
+                            Features JWT authentication with refresh tokens, role-based authorization, rate limiting, 
+                            comprehensive testing, and automated CI/CD pipelines.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">.NET 8</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">Entity Framework</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">xUnit</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Clean Architecture</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Security Best Practices</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Comprehensive Testing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Global Disaster Management -->
+                <div class="project-card featured" data-category="enterprise fullstack" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-badge">Academic Project</div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=300&fit=crop" alt="Disaster Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Karinateii" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Global Disaster Management System</h3>
+                            <span class="project-type">Full-Stack • IoT • ML</span>
+                        </div>
+                        <p class="project-description">
+                            Comprehensive emergency response platform supporting multiple disaster types with real-time 
+                            alerts via SignalR, ML.NET predictions, IoT sensor integration, multi-channel communications 
+                            (SMS, WhatsApp, USSD), and emergency shelter management system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ASP.NET Core 8</span>
+                            <span class="tech-tag">SignalR</span>
+                            <span class="tech-tag">ML.NET</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Twilio API</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-Time Communications</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Machine Learning</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Multi-Language Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Change Management System -->
+                <div class="project-card" data-category="enterprise fullstack" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop" alt="Change Management System">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Karinateii" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Change Management System</h3>
+                            <span class="project-type">Full-Stack • Enterprise</span>
+                        </div>
+                        <p class="project-description">
+                            Secure enterprise web application for managing organizational change requests with role-based 
+                            authorization, comprehensive security measures, email notifications, audit trails, and 
+                            responsive DataTables integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ASP.NET Core 6</span>
+                            <span class="tech-tag">MVC</span>
+                            <span class="tech-tag">Identity</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Bootstrap 5</span>
+                            <span class="tech-tag">Serilog</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Role-Based Security</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Audit Trail System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Laboratory Inventory Management -->
+                <div class="project-card" data-category="enterprise fullstack" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&h=300&fit=crop" alt="Inventory Management">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Karinateii/InventoryManagement" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Laboratory Inventory Management</h3>
+                            <span class="project-type">Full-Stack</span>
+                        </div>
+                        <p class="project-description">
+                            Complete inventory management system for laboratory supplies with purchase order tracking, 
+                            partial fulfillment support, stock adjustment, reorder alerts, supplier management, and 
+                            image upload functionality.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">ASP.NET Core 8</span>
+                            <span class="tech-tag">MVC</span>
+                            <span class="tech-tag">EF Core</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">jQuery</span>
+                            <span class="tech-tag">DataTables</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Repository Pattern</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-Time Alerts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: CAMANDA Academy Payment Tracker -->
+                <div class="project-card" data-category="frontend fullstack" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-badge">Live</div>
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=500&h=300&fit=crop" alt="Payment Tracker">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://karinateii.github.io/camanda-academy-payment-tracker/" target="_blank" class="project-link" title="View Live">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="https://github.com/Karinateii/camanda-academy-payment-tracker" target="_blank" class="project-link" title="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">CAMANDA Academy Payment Tracker</h3>
+                            <span class="project-type">Frontend</span>
+                        </div>
+                        <p class="project-description">
+                            Professional web application for tracking student payments with localStorage persistence, 
+                            real-time statistics, CSV export, search functionality, modern animations, and fully 
+                            responsive design - all built with vanilla JavaScript.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">localStorage</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Zero Dependencies</span>
+                            </div>
+                            <div class="highlight">
+                                <i class="fas fa-check-circle"></i>
+                                <span>GitHub Pages Deployed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: More Projects Coming -->
+                <div class="project-card coming-soon" data-category="all" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <div class="coming-soon-content">
+                            <i class="fas fa-code"></i>
+                            <h4>More Projects Coming Soon</h4>
+                            <p>Currently working on exciting new projects</p>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Stay Tuned!</h3>
+                            <span class="project-type">In Development</span>
+                        </div>
+                        <p class="project-description">
+                            I'm constantly learning and building new things. Follow me on GitHub to stay updated 
+                            with my latest projects and contributions!
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Microservices</span>
+                            <span class="tech-tag">Cloud</span>
+                            <span class="tech-tag">React</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- GitHub Stats -->
+            <div class="github-stats" data-aos="fade-up">
+                <h3>GitHub Activity</h3>
+                <div class="stats-grid">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Karinateii&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Karinateii&theme=tokyonight&hide_border=true" alt="GitHub Streak">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Work <span class="gradient-text">Together</span></h2>
+                <p class="section-description">
+                    Have a project in mind? Let's discuss how I can help bring your ideas to life
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-text">
+                        <h3>Let's Connect</h3>
+                        <p>
+                            I'm always interested in hearing about new opportunities, collaborations, 
+                            or just having a chat about technology. Whether you have a project in mind 
+                            or just want to say hi, feel free to reach out!
+                        </p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <a href="mailto:karinateidoutimiwei@gmail.com">karinateidoutimiwei@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank">Ebenezer Doutimiwei</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Karinateii" target="_blank">@Karinateii</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Location</h4>
+                                <p>Available for Remote & On-site</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://github.com/Karinateii" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:karinateidoutimiwei@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large btn-block">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    
+                    <div class="form-success" id="form-success">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Message Sent!</h4>
+                        <p>Thank you for reaching out. I'll get back to you soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <a href="#home" class="footer-logo">
+                        <span class="logo-bracket">&lt;</span>
+                        <span class="logo-text">ED</span>
+                        <span class="logo-bracket">/&gt;</span>
+                    </a>
+                    <p class="footer-tagline">
+                        Building the future, one line of code at a time.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Karinateii" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:karinateidoutimiwei@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Projects</h4>
+                        <ul>
+                            <li><a href="https://github.com/Karinateii/SmartHub" target="_blank">SmartHub API</a></li>
+                            <li><a href="https://github.com/Karinateii" target="_blank">Disaster Management</a></li>
+                            <li><a href="https://github.com/Karinateii/InventoryManagement" target="_blank">Inventory System</a></li>
+                            <li><a href="https://karinateii.github.io/camanda-academy-payment-tracker/" target="_blank">Payment Tracker</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="./resume.html" target="_blank">Resume</a></li>
+                            <li><a href="https://github.com/Karinateii" target="_blank">GitHub Profile</a></li>
+                            <li><a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ebenezer Doutimiwei. All rights reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" class="scroll-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Devicon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- Scripts -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

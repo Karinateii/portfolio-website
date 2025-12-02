@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebenezer Doutimiwei - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .resume-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .resume-header {
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .resume-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .resume-header .title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .resume-content {
+            padding: 2rem;
+        }
+        
+        .section {
+            margin-bottom: 2rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #6366f1;
+            border-bottom: 2px solid #6366f1;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .summary {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-category h4 {
+            color: #6366f1;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .skill-list {
+            list-style: none;
+            padding-left: 1rem;
+        }
+        
+        .skill-list li {
+            padding: 0.25rem 0;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: '▹';
+            position: absolute;
+            left: -1rem;
+            color: #6366f1;
+        }
+        
+        .experience-item,
+        .project-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .item-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .item-company {
+            color: #6366f1;
+            font-weight: 600;
+        }
+        
+        .item-date {
+            color: #777;
+            font-size: 0.95rem;
+        }
+        
+        .item-description {
+            color: #555;
+            margin-top: 0.5rem;
+        }
+        
+        .item-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .item-description li {
+            margin: 0.25rem 0;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+        
+        .tech-tag {
+            background: #f0f0f0;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: #666;
+            border: 1px solid #ddd;
+        }
+        
+        .education-item {
+            margin-bottom: 1rem;
+        }
+        
+        .degree {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .institution {
+            color: #6366f1;
+            font-weight: 600;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: #6366f1;
+            border: 2px solid #6366f1;
+        }
+        
+        .btn-secondary:hover {
+            background: #6366f1;
+            color: white;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .resume-container {
+                box-shadow: none;
+                margin: 0;
+            }
+            
+            .buttons {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .resume-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                gap: 1rem;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="resume-header">
+            <h1>Ebenezer Doutimiwei</h1>
+            <div class="title">Full-Stack Software Engineer</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:karinateidoutimiwei@gmail.com">karinateidoutimiwei@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Karinateii" target="_blank">Karinateii</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="resume-content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Professional Summary
+                </h2>
+                <p class="summary">
+                    Results-driven Full-Stack Software Engineer with expertise in building scalable enterprise applications 
+                    using the .NET ecosystem. Specialized in developing secure RESTful APIs, implementing clean architecture 
+                    patterns, and creating robust backend systems. Proven track record of delivering high-quality solutions 
+                    with strong emphasis on security best practices, automated testing, and modern development workflows. 
+                    Passionate about writing maintainable code and solving complex technical challenges.
+                </p>
+            </div>
+            
+            <!-- Technical Skills -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-code"></i>
+                    Technical Skills
+                </h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Backend Development</h4>
+                        <ul class="skill-list">
+                            <li>C# & .NET 6/8</li>
+                            <li>ASP.NET Core Web API</li>
+                            <li>Entity Framework Core</li>
+                            <li>RESTful API Design</li>
+                            <li>LINQ & Lambda Expressions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Database & ORM</h4>
+                        <ul class="skill-list">
+                            <li>SQL Server & T-SQL</li>
+                            <li>Database Design & Normalization</li>
+                            <li>EF Core Migrations</li>
+                            <li>Query Optimization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Frontend Development</h4>
+                        <ul class="skill-list">
+                            <li>HTML5, CSS3, JavaScript (ES6+)</li>
+                            <li>Bootstrap & Responsive Design</li>
+                            <li>jQuery & AJAX</li>
+                            <li>Chart.js & Data Visualization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Architecture & Patterns</h4>
+                        <ul class="skill-list">
+                            <li>Clean Architecture</li>
+                            <li>MVC Pattern</li>
+                            <li>Repository & Unit of Work</li>
+                            <li>Dependency Injection</li>
+                            <li>SOLID Principles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Security & Authentication</h4>
+                        <ul class="skill-list">
+                            <li>JWT Authentication</li>
+                            <li>ASP.NET Core Identity</li>
+                            <li>Role-Based Authorization</li>
+                            <li>Password Hashing (BCrypt)</li>
+                            <li>Security Best Practices</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>DevOps & Tools</h4>
+                        <ul class="skill-list">
+                            <li>Git & GitHub</li>
+                            <li>GitHub Actions (CI/CD)</li>
+                            <li>Docker & Containerization</li>
+                            <li>Visual Studio / VS Code</li>
+                            <li>Swagger/OpenAPI</li>
+                            <li>Postman</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Testing & Quality</h4>
+                        <ul class="skill-list">
+                            <li>xUnit Testing Framework</li>
+                            <li>Integration Testing</li>
+                            <li>Unit Testing</li>
+                            <li>FluentValidation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h4>Additional Technologies</h4>
+                        <ul class="skill-list">
+                            <li>SignalR (Real-time)</li>
+                            <li>ML.NET (Machine Learning)</li>
+                            <li>Serilog (Logging)</li>
+                            <li>Twilio API Integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Key Projects -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Featured Projects
+                </h2>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">SmartHub - Enterprise Web API</div>
+                            <div class="item-company">Personal Project</div>
+                        </div>
+                        <div class="item-date">Nov 2025 - Present</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Production-ready RESTful API built with Clean Architecture principles, featuring comprehensive security measures and modern development practices.</p>
+                        <ul>
+                            <li>Implemented JWT authentication with refresh token rotation and role-based authorization</li>
+                            <li>Designed Clean Architecture with clear separation of concerns across Domain, Application, Infrastructure, and API layers</li>
+                            <li>Integrated rate limiting on sensitive endpoints and BCrypt password hashing for enhanced security</li>
+                            <li>Created comprehensive test suite with xUnit (unit and integration tests)</li>
+                            <li>Established CI/CD pipeline with GitHub Actions for automated builds and testing</li>
+                            <li>Implemented structured logging with Serilog and health check endpoints</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">.NET 8</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">Entity Framework Core</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">xUnit</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Global Disaster Management System</div>
+                            <div class="item-company">Academic Final Year Project - Babcock University</div>
+                        </div>
+                        <div class="item-date">2024 - 2025</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Comprehensive emergency response platform supporting multiple disaster types with real-time communications and ML predictions.</p>
+                        <ul>
+                            <li>Developed multi-disaster support system (floods, earthquakes, fires, hurricanes, tsunamis)</li>
+                            <li>Implemented real-time alert system using SignalR for instant notifications</li>
+                            <li>Integrated ML.NET for disaster risk prediction using Fast Tree classifier</li>
+                            <li>Built multi-channel communication system (SMS, WhatsApp, USSD, Voice/IVR) via Twilio</li>
+                            <li>Created IoT sensor integration for water level monitoring and weather tracking</li>
+                            <li>Designed emergency shelter management with real-time capacity tracking</li>
+                            <li>Implemented multi-language support for 8 languages</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ASP.NET Core 8</span>
+                            <span class="tech-tag">SignalR</span>
+                            <span class="tech-tag">ML.NET</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Twilio API</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Change Management System</div>
+                            <div class="item-company">Personal Project</div>
+                        </div>
+                        <div class="item-date">2024</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Secure enterprise web application for managing organizational change requests with comprehensive security measures.</p>
+                        <ul>
+                            <li>Implemented role-based authorization with Admin and Employee roles</li>
+                            <li>Designed approval workflow system with status tracking and audit trails</li>
+                            <li>Integrated SMTP-based email notifications for status changes</li>
+                            <li>Applied security best practices including CSRF protection and security headers</li>
+                            <li>Implemented structured logging with Serilog for monitoring and debugging</li>
+                            <li>Created responsive UI with Bootstrap 5 and DataTables integration</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ASP.NET Core 6</span>
+                            <span class="tech-tag">MVC</span>
+                            <span class="tech-tag">Identity</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Bootstrap 5</span>
+                            <span class="tech-tag">Serilog</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Laboratory Inventory Management System</div>
+                            <div class="item-company">Personal Project</div>
+                        </div>
+                        <div class="item-date">2024</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Complete inventory management solution for laboratory supplies with purchase order tracking and stock management.</p>
+                        <ul>
+                            <li>Built comprehensive inventory tracking with quantity monitoring and reorder alerts</li>
+                            <li>Implemented purchase order system with partial fulfillment support</li>
+                            <li>Designed supplier management module with contact tracking</li>
+                            <li>Integrated image upload functionality for product documentation</li>
+                            <li>Applied Repository Pattern and Unit of Work for data access</li>
+                            <li>Created responsive UI with AJAX operations and DataTables</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">ASP.NET Core 8</span>
+                            <span class="tech-tag">MVC</span>
+                            <span class="tech-tag">EF Core</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">jQuery</span>
+                            <span class="tech-tag">DataTables</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">CAMANDA Academy Payment Tracker</div>
+                            <div class="item-company">Client Project - Live Production</div>
+                        </div>
+                        <div class="item-date">2024</div>
+                    </div>
+                    <div class="item-description">
+                        <p>Professional payment tracking web application with zero dependencies, deployed on GitHub Pages.</p>
+                        <ul>
+                            <li>Built vanilla JavaScript application with localStorage persistence</li>
+                            <li>Implemented real-time statistics dashboard and CSV export functionality</li>
+                            <li>Created advanced search and filtering across all payment fields</li>
+                            <li>Designed modern, gradient-based UI with smooth animations</li>
+                            <li>Achieved 100% responsive design for mobile, tablet, and desktop</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">localStorage</span>
+                            <span class="tech-tag">GitHub Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+                <div class="education-item">
+                    <div class="degree">Bachelor of Science in Computer Science</div>
+                    <div class="institution">Babcock University</div>
+                    <div class="item-date">2021 - 2025</div>
+                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+                        <li>Final Year Project: Global Disaster Management System</li>
+                        <li>Relevant Coursework: Software Engineering, Database Systems, Web Development, Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Professional Development -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-certificate"></i>
+                    Professional Development
+                </h2>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Self-taught .NET Developer with focus on modern web development practices</li>
+                    <li>Active contributor to open-source projects on GitHub</li>
+                    <li>Continuous learner through Microsoft Learn, Pluralsight, and technical documentation</li>
+                    <li>Practice problem-solving on coding platforms and technical challenges</li>
+                </ul>
+            </div>
+            
+            <!-- Additional Information -->
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-info-circle"></i>
+                    Additional Information
+                </h2>
+                <div class="skills-grid">
+                    <div>
+                        <h4>Languages</h4>
+                        <ul class="skill-list">
+                            <li>English (Fluent)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Availability</h4>
+                        <ul class="skill-list">
+                            <li>Open to Remote Work</li>
+                            <li>Open to On-site Opportunities</li>
+                            <li>Available for Relocation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Interests</h4>
+                        <ul class="skill-list">
+                            <li>Cloud Technologies (Azure, AWS)</li>
+                            <li>Microservices Architecture</li>
+                            <li>DevOps Practices</li>
+                            <li>System Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-home"></i> Back to Portfolio
+            </a>
+            <button onclick="window.print()" class="btn btn-secondary">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+        </div>
+    </div>
+</body>
+</html>
