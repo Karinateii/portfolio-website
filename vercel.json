@@ -4,12 +4,6 @@
   "devCommand": "python -m http.server 8000",
   "framework": null,
   "installCommand": "echo 'No install needed'",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
