@@ -179,45 +179,56 @@ filterButtons.forEach(button => {
 });
 
 // ================================
-// CONTACT FORM - Simple mailto
+// CONTACT FORM
 // ================================
 const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
         
-        window.location.href = `mailto:karinateidoutimiwei@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const subject = formData.get('subject');
+        const message = formData.get('message');
+        
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            reply_to: email
+        };
+        
+        emailjs.send('service_691uxh3', 'template_contact_form', templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                contactForm.style.display = 'none';
+                formSuccess.classList.add('show');
+                
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.style.display = 'block';
+                    formSuccess.classList.remove('show');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 5000);
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+                alert('Failed to send message. Please try again or contact directly at karinateidoutimiwei@gmail.com');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
     });
 }
-
-// ================================
-// SCROLL TO TOP BUTTON
-// ================================
-const scrollTopBtn = document.getElementById('scroll-top');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollTopBtn.classList.add('show');
-    } else {
-        scrollTopBtn.classList.remove('show');
-    }
-});
-
-scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// ================================
-// SIMPLE AOS (Animate on Scroll)
-// ================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
