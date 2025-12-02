@@ -185,14 +185,8 @@ const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Check if emailjs is ready
-        if (typeof emailjs === 'undefined') {
-            alert('Email service is loading. Please try again in a moment.');
-            return;
-        }
         
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
@@ -200,22 +194,26 @@ if (contactForm) {
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         
         const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const subject = formData.get('subject');
-        const message = formData.get('message');
-        
-        const templateParams = {
-            from_name: name,
-            from_email: email,
-            subject: subject,
-            message: message,
-            reply_to: email
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
         };
         
-        emailjs.send('service_691uxh3', 'template_contact_form', templateParams)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
+        try {
+            const response = await fetch('/api/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+                console.log('SUCCESS!', result);
                 contactForm.style.display = 'none';
                 formSuccess.classList.add('show');
                 
@@ -226,13 +224,15 @@ if (contactForm) {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
                 }, 5000);
-            })
-            .catch((error) => {
-                console.log('FAILED...', error);
-                alert('Failed to send message. Please try again or contact directly at karinateidoutimiwei@gmail.com');
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = originalText;
-            });
+            } else {
+                throw new Error(result.error || 'Failed to send email');
+            }
+        } catch (error) {
+            console.log('FAILED...', error);
+            alert('Failed to send message. Please try again or email directly at karinateidoutimiwei@gmail.com');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        }
     });
 }
 const observerOptions = {
