@@ -188,6 +188,12 @@ if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
+        // Disable submit button to prevent double submission
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
         // Get form data
         const formData = new FormData(contactForm);
         const name = formData.get('name');
@@ -195,22 +201,39 @@ if (contactForm) {
         const subject = formData.get('subject');
         const message = formData.get('message');
         
-        // Create mailto link
-        const mailtoLink = `mailto:karinateidoutimiwei@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\n${message}`)}`;
+        // EmailJS parameters
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            reply_to: email
+        };
         
-        // Open email client
-        window.location.href = mailtoLink;
-        
-        // Show success message
-        contactForm.style.display = 'none';
-        formSuccess.classList.add('show');
-        
-        // Reset form and hide success message after 5 seconds
-        setTimeout(() => {
-            contactForm.reset();
-            contactForm.style.display = 'block';
-            formSuccess.classList.remove('show');
-        }, 5000);
+        // Send email using EmailJS
+        emailjs.send('service_691uxh3', 'template_contact_form', templateParams)
+            .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+                
+                // Show success message
+                contactForm.style.display = 'none';
+                formSuccess.classList.add('show');
+                
+                // Reset form and hide success message after 5 seconds
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.style.display = 'block';
+                    formSuccess.classList.remove('show');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 5000);
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+                alert('Failed to send message. Please try again or contact directly at karinateidoutimiwei@gmail.com');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            });
     });
 }
 
