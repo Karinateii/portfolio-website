@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ebenezer Doutimiwei - Resume</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -14,672 +13,311 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f5f5f5;
-        }
-        
-        .resume-container {
-            max-width: 900px;
-            margin: 2rem auto;
+            line-height: 1.5;
+            color: #222;
             background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 20px;
         }
         
-        .resume-header {
-            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
         }
         
-        .resume-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        .header {
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 15px;
         }
         
-        .resume-header .title {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            opacity: 0.9;
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
         }
         
-        .contact-info {
+        .header p {
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .contact {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
+            gap: 15px;
             flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .resume-content {
-            padding: 2rem;
-        }
-        
-        .section {
-            margin-bottom: 2rem;
+            font-size: 13px;
+            margin-top: 8px;
         }
         
         .section-title {
-            font-size: 1.5rem;
-            color: #6366f1;
-            border-bottom: 2px solid #6366f1;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
         }
         
-        .summary {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #555;
+        .entry {
+            margin-bottom: 12px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+        
+        .entry-title {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .entry-company {
+            font-size: 13px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .entry-date {
+            font-size: 12px;
+            color: #777;
+        }
+        
+        .entry-description {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #333;
+            margin-top: 4px;
+        }
+        
+        .entry-description ul {
+            margin-left: 20px;
+            margin-top: 5px;
+        }
+        
+        .entry-description li {
+            margin-bottom: 4px;
         }
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            font-size: 13px;
         }
         
         .skill-category h4 {
-            color: #6366f1;
-            margin-bottom: 0.75rem;
-            font-size: 1.1rem;
-        }
-        
-        .skill-list {
-            list-style: none;
-            padding-left: 1rem;
-        }
-        
-        .skill-list li {
-            padding: 0.25rem 0;
-            position: relative;
-        }
-        
-        .skill-list li:before {
-            content: '▹';
-            position: absolute;
-            left: -1rem;
-            color: #6366f1;
-        }
-        
-        .experience-item,
-        .project-item {
-            margin-bottom: 1.5rem;
-        }
-        
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .item-title {
-            font-size: 1.15rem;
             font-weight: 600;
-            color: #333;
+            margin-bottom: 4px;
+            font-size: 13px;
         }
         
-        .item-company {
-            color: #6366f1;
-            font-weight: 600;
-        }
-        
-        .item-date {
-            color: #777;
-            font-size: 0.95rem;
-        }
-        
-        .item-description {
+        .skill-category p {
             color: #555;
-            margin-top: 0.5rem;
+            line-height: 1.5;
         }
         
-        .item-description ul {
-            margin-left: 1.5rem;
-            margin-top: 0.5rem;
+        .cert-list {
+            font-size: 13px;
+            line-height: 1.7;
+            column-count: 2;
+            column-gap: 20px;
         }
         
-        .item-description li {
-            margin: 0.25rem 0;
+        .cert-list li {
+            list-style: none;
+            padding-left: 0;
         }
         
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.75rem;
-        }
-        
-        .tech-tag {
-            background: #f0f0f0;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            color: #666;
-            border: 1px solid #ddd;
-        }
-        
-        .education-item {
-            margin-bottom: 1rem;
-        }
-        
-        .degree {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
-        .institution {
-            color: #6366f1;
-            font-weight: 600;
-        }
-        
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .cert-item {
-            display: flex;
-            align-items: start;
-            gap: 1rem;
-            padding: 1rem;
-            background: #f9f9f9;
-            border-radius: 8px;
-            border-left: 3px solid #6366f1;
-        }
-        
-        .cert-badge {
-            font-size: 1.5rem;
-            color: #6366f1;
-        }
-        
-        .cert-item h4 {
-            font-size: 0.95rem;
-            margin-bottom: 0.25rem;
+        .summary {
+            font-size: 13px;
+            line-height: 1.7;
             color: #333;
+            margin-bottom: 10px;
         }
         
-        .cert-item p {
-            font-size: 0.85rem;
-            color: #777;
-        }
-        
-        .buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            padding: 2rem;
-            background: #f9f9f9;
-        }
-        
-        .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+        a {
+            color: #0066cc;
             text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
-        }
-        
-        .btn-secondary {
-            background: white;
-            color: #6366f1;
-            border: 2px solid #6366f1;
-        }
-        
-        .btn-secondary:hover {
-            background: #6366f1;
-            color: white;
         }
         
         @media print {
             body {
-                background: white;
-            }
-            
-            .resume-container {
-                box-shadow: none;
-                margin: 0;
-            }
-            
-            .buttons {
-                display: none;
+                padding: 0;
             }
         }
         
-        @media (max-width: 768px) {
-            .resume-header h1 {
-                font-size: 2rem;
+        @media (max-width: 600px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
             
-            .contact-info {
-                gap: 1rem;
-            }
-            
-            .item-header {
+            .entry-header {
                 flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <div class="resume-container">
-        <div class="resume-header">
-            <h1>Ebenezer Doutimiwei</h1>
-            <div class="title">Software Engineer | AI/ML Enthusiast</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:karinateidoutimiwei@gmail.com">karinateidoutimiwei@gmail.com</a>
+    <div class="container">
+        <div class="header">
+            <h1>EBENEZER DOUTIMIWEI</h1>
+            <p>Full-Stack Software Engineer | .NET | Cloud Architecture | AI/ML</p>
+            <div class="contact">
+                <span>karinateidoutimiwei@gmail.com</span>
+                <span><a href="https://github.com/Karinateii">github.com/Karinateii</a></span>
+                <span><a href="https://linkedin.com/in/ebenezer-doutimiwei-b929a6208/">LinkedIn</a></span>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div>
+            <div class="section-title">Professional Summary</div>
+            <p class="summary">
+                Full-stack software engineer with 2+ years of proven experience delivering enterprise-scale solutions. Expert in .NET/ASP.NET Core, cloud infrastructure (Docker, Kubernetes), and integrating AI/ML capabilities into production systems. Track record of architecting scalable systems, implementing security best practices, and leading successful project deliveries from concept to deployment. Seeking challenging roles where technical excellence drives business impact.
+            </p>
+        </div>
+
+        <!-- Technical Skills -->
+        <div>
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Languages</h4>
+                    <p>C#, Python, Java, JavaScript, SQL</p>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <a href="https://github.com/Karinateii" target="_blank">Karinateii</a>
+                <div class="skill-category">
+                    <h4>Backend & Frameworks</h4>
+                    <p>.NET 6/8, ASP.NET Core, Entity Framework Core, RESTful APIs, Microservices</p>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/ebenezer-doutimiwei-b929a6208/" target="_blank">LinkedIn</a>
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <p>Docker, Kubernetes, Azure, CI/CD (GitHub Actions), Azure DevOps</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <p>SQL Server, Oracle, MySQL, Database Optimization</p>
+                </div>
+                <div class="skill-category">
+                    <h4>AI/ML</h4>
+                    <p>ML.NET, scikit-learn, Pandas, NumPy, Predictive Analytics</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Best Practices</h4>
+                    <p>Clean Architecture, SOLID Principles, Unit Testing (xUnit), Agile</p>
                 </div>
             </div>
         </div>
-        
-        <div class="resume-content">
-            <!-- Professional Summary -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-user"></i>
-                    Professional Summary
-                </h2>
-                <p class="summary">
-                    Full-Stack Software Engineer with 2+ years of experience designing and deploying scalable enterprise solutions. 
-                    Expertise in <strong>.NET/ASP.NET Core</strong>, cloud architecture, and <strong>AI/ML integration</strong>. 
-                    Proven track record delivering secure, high-performance systems that solve critical business problems. 
-                    Strong advocate for clean code, microservices, and DevOps best practices.
-                </p>
-            </div>
+
+        <!-- Professional Experience -->
+        <div>
+            <div class="section-title">Professional Experience</div>
             
-            <!-- Technical Skills -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-code"></i>
-                    Technical Skills
-                </h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4><i class="fas fa-laptop-code"></i> Languages</h4>
-                        <ul class="skill-list">
-                            <li>C#</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>SQL</li>
-                        </ul>
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Freelance Software Engineer</div>
+                        <div class="entry-company">Remote, Nigeria</div>
                     </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-brain"></i> AI/ML & Data Analysis</h4>
-                        <ul class="skill-list">
-                            <li>ML.NET</li>
-                            <li>scikit-learn</li>
-                            <li>Pandas & NumPy</li>
-                            <li>Jupyter Notebooks</li>
-                            <li>Data Analytics</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-cloud"></i> Cloud & DevOps</h4>
-                        <ul class="skill-list">
-                            <li>Docker & Kubernetes</li>
-                            <li>Azure Cloud</li>
-                            <li>CI/CD Pipelines</li>
-                            <li>GitHub Actions</li>
-                            <li>Azure DevOps</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-database"></i> Databases</h4>
-                        <ul class="skill-list">
-                            <li>Microsoft SQL Server</li>
-                            <li>Oracle Database</li>
-                            <li>MySQL</li>
-                            <li>Entity Framework Core</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-server"></i> Backend Development</h4>
-                        <ul class="skill-list">
-                            <li>.NET 6/8</li>
-                            <li>ASP.NET Core Web API</li>
-                            <li>RESTful API Design</li>
-                            <li>Microservices</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-lock"></i> Security & Auth</h4>
-                        <ul class="skill-list">
-                            <li>JWT Authentication</li>
-                            <li>Azure Active Directory</li>
-                            <li>ASP.NET Identity</li>
-                            <li>BCrypt Hashing</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-cogs"></i> Practices</h4>
-                        <ul class="skill-list">
-                            <li>Clean Architecture</li>
-                            <li>SOLID Principles</li>
-                            <li>Agile/Scrum</li>
-                            <li>Unit Testing (xUnit)</li>
-                            <li>REST APIs</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h4><i class="fas fa-tools"></i> Additional Tech</h4>
-                        <ul class="skill-list">
-                            <li>SignalR (Real-time)</li>
-                            <li>Unity Game Engine</li>
-                            <li>jQuery & Bootstrap</li>
-                            <li>Twilio API</li>
-                        </ul>
-                    </div>
+                    <div class="entry-date">Nov 2023 - Present</div>
                 </div>
-            </div>
-            
-            <!-- Professional Experience -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-briefcase"></i>
-                    Professional Experience
-                </h2>
-                
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Freelance Software Developer</div>
-                            <div class="item-company">Remote</div>
-                        </div>
-                        <div class="item-date">Nov 2023 - Present</div>
-                    </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Implemented enterprise-grade authentication via <strong>Azure Active Directory</strong> for client applications</li>
-                            <li>Refactored legacy monoliths into microservices, containerized with <strong>Docker</strong> and orchestrated with <strong>Kubernetes</strong></li>
-                            <li>Applied CI/CD workflows, reducing deployment errors by <strong>40%</strong> and enabling faster delivery</li>
-                            <li>Built scalable backend systems with <strong>.NET 8</strong>, integrating <strong>ML.NET</strong> for intelligent features</li>
-                            <li>Collaborated with international clients to deliver custom enterprise solutions</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Forward Intern Programme</div>
-                            <div class="item-company">McKinsey & Company</div>
-                        </div>
-                        <div class="item-date">Jun 2023 - Nov 2023</div>
-                    </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Collaborated on business-critical projects, applying <strong>agile frameworks</strong> to deliver innovative solutions</li>
-                            <li>Improved team efficiency through structured problem-solving and communication</li>
-                            <li>Contributed to strategic initiatives focused on digital transformation</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="experience-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Junior .NET Developer</div>
-                            <div class="item-company">Definitive Track Solutions</div>
-                        </div>
-                        <div class="item-date">Jan 2022 - Dec 2022</div>
-                    </div>
-                    <div class="item-description">
-                        <ul>
-                            <li>Built backend modules in <strong>C#</strong> and optimized SQL queries, cutting report generation time by <strong>30%</strong></li>
-                            <li>Developed frontend interactions using <strong>jQuery</strong> and <strong>REST APIs</strong> to enhance usability</li>
-                            <li>Contributed to enterprise-level software solutions with focus on scalability and performance</li>
-                            <li>Participated in code reviews and implemented best practices for clean code</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Key Projects -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-project-diagram"></i>
-                    Featured Projects (Top 3)
-                </h2>
-                
-                <div class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">SmartHub - Enterprise Web API</div>
-                        </div>
-                    </div>
-                    <div class="item-description">
-                        Clean Architecture RESTful API with JWT authentication, role-based authorization, comprehensive test coverage (xUnit), and CI/CD pipeline via GitHub Actions.
-                        <div class="tech-tags">
-                            <span class="tech-tag">.NET 8</span>
-                            <span class="tech-tag">Clean Arch</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">xUnit</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Global Disaster Management System</div>
-                        </div>
-                    </div>
-                    <div class="item-description">
-                        Enterprise platform with ML.NET-powered disaster prediction, real-time alerts via SignalR, multi-channel messaging (SMS/WhatsApp/IVR via Twilio), and IoT integration. Dockerized & Kubernetes-ready.
-                        <div class="tech-tags">
-                            <span class="tech-tag">ASP.NET Core 8</span>
-                            <span class="tech-tag">ML.NET</span>
-                            <span class="tech-tag">SignalR</span>
-                            <span class="tech-tag">Docker/K8s</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item">
-                    <div class="item-header">
-                        <div>
-                            <div class="item-title">Change Management System</div>
-                        </div>
-                    </div>
-                    <div class="item-description">
-                        Secure enterprise web app with role-based authorization, approval workflow, audit trails, and responsive Bootstrap 5 UI.
-                        <div class="tech-tags">
-                            <span class="tech-tag">ASP.NET Core 6</span>
-                            <span class="tech-tag">Identity</span>
-                            <span class="tech-tag">SQL Server</span>
-                            <span class="tech-tag">Bootstrap 5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Education & Certifications -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-graduation-cap"></i>
-                    Education & Certifications
-                </h2>
-                
-                <div class="education-item">
-                    <div class="degree">Bachelor of Science in Computer Science</div>
-                    <div class="institution">Babcock University, Nigeria</div>
-                    <div class="item-date">2019 - 2023</div>
-                    <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
-                        <li>Final Year Project: Global Disaster Management System with ML.NET</li>
-                        <li>Relevant Coursework: Software Engineering, Database Systems, AI, Data Structures & Algorithms</li>
+                <div class="entry-description">
+                    <ul>
+                        <li>Architected and deployed 5+ enterprise applications using .NET 8 with clean architecture, securing long-term client contracts and generating sustainable revenue.</li>
+                        <li>Reduced deployment errors by 40% through robust CI/CD implementation with GitHub Actions and Azure DevOps, accelerating release cycles.</li>
+                        <li>Redesigned legacy monolith into microservices architecture, containerized with Docker and orchestrated with Kubernetes for improved scalability.</li>
+                        <li>Implemented enterprise security including JWT authentication, role-based access control, and Azure Active Directory integration across multiple projects.</li>
+                        <li>Integrated ML.NET for intelligent features including predictive analytics and anomaly detection systems.</li>
                     </ul>
                 </div>
-                
-                <h3 style="margin-top: 2rem; margin-bottom: 1rem; color: #6366f1;">
-                    <i class="fas fa-certificate"></i> Professional Certifications
-                </h3>
-                
-                <div class="certifications-grid">
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <div>
-                            <h4>Kubernetes and Cloud Native Associate (KCNA)</h4>
-                            <p>Linux Foundation - 2025</p>
-                        </div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-header">
+                    <div>
+                        <div class="entry-title">Forward Intern Programme</div>
+                        <div class="entry-company">McKinsey & Company, Nigeria</div>
                     </div>
-                    
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fab fa-microsoft"></i>
-                        </div>
-                        <div>
-                            <h4>Microsoft Certified C# Developer</h4>
-                            <p>Microsoft - 2023</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <div>
-                            <h4>Deloitte Data Analytics Job Simulation</h4>
-                            <p>Deloitte - 2025</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div>
-                            <h4>ASP.NET Core Web Development</h4>
-                            <p>Udemy - 2023</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <div>
-                            <h4>Oracle SQL & Database Administration</h4>
-                            <p>New Horizons - 2023</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <div>
-                            <h4>CompTIA A+ & Security+</h4>
-                            <p>New Horizons - 2023</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cert-item">
-                        <div class="cert-badge">
-                            <i class="fab fa-java"></i>
-                        </div>
-                        <div>
-                            <h4>Java & Android Development</h4>
-                            <p>New Horizons - 2023</p>
-                        </div>
-                    </div>
+                    <div class="entry-date">Jun 2023 - Nov 2023</div>
+                </div>
+                <div class="entry-description">
+                    <ul>
+                        <li>Collaborated with consulting teams on business-critical projects in fast-paced environment, applying agile methodologies and delivering solutions on tight schedules.</li>
+                        <li>Developed strategic thinking and analytical problem-solving skills through structured frameworks and cross-functional collaboration.</li>
+                        <li>Contributed to digital transformation initiatives by analyzing business requirements and translating them into technical solutions.</li>
+                    </ul>
                 </div>
             </div>
             
-            <!-- Additional Information -->
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="fas fa-heart"></i>
-                    Interests & Professional Development
-                </h2>
-                <div class="skills-grid">
+            <div class="entry">
+                <div class="entry-header">
                     <div>
-                        <h4>Areas of Interest</h4>
-                        <ul class="skill-list">
-                            <li>Artificial Intelligence & Machine Learning</li>
-                            <li>Cloud-Native Architecture</li>
-                            <li>AI Agent Development</li>
-                            <li>Microservices & System Design</li>
-                            <li>DevOps & CI/CD Automation</li>
-                            <li>Game Development with AI</li>
-                        </ul>
+                        <div class="entry-title">Junior .NET Developer</div>
+                        <div class="entry-company">Definitive Track Solutions, Nigeria</div>
                     </div>
-                    <div>
-                        <h4>Languages</h4>
-                        <ul class="skill-list">
-                            <li>English (Fluent)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Availability</h4>
-                        <ul class="skill-list">
-                            <li>Open to Remote Work</li>
-                            <li>Open to On-site Opportunities</li>
-                            <li>Available for Relocation</li>
-                        </ul>
-                    </div>
+                    <div class="entry-date">Jan 2022 - Dec 2022</div>
+                </div>
+                <div class="entry-description">
+                    <ul>
+                        <li>Developed backend modules in C#, optimizing database queries to reduce report generation time by 30% through strategic indexing and caching.</li>
+                        <li>Built responsive user interfaces using jQuery and Bootstrap, integrating with REST APIs for seamless user experience.</li>
+                        <li>Contributed to enterprise solutions emphasizing scalability, performance, and security best practices.</li>
+                        <li>Participated in code reviews and mentored junior developers on clean code principles and design patterns.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        
-        <div class="buttons">
-            <a href="index.html" class="btn btn-primary">
-                <i class="fas fa-home"></i> Back to Portfolio
-            </a>
-            <button onclick="window.print()" class="btn btn-secondary">
-                <i class="fas fa-download"></i> Download PDF
-            </button>
+
+        <!-- Featured Projects -->
+        <div>
+            <div class="section-title">Featured Projects</div>
+            
+            <div class="entry">
+                <div class="entry-title">SmartHub - Enterprise Web API</div>
+                <div class="entry-description">
+                    Production-ready RESTful API built with clean architecture. Features JWT authentication with refresh tokens, role-based authorization, comprehensive xUnit test coverage, and automated GitHub Actions CI/CD pipeline. Docker-ready and fully documented.
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-title">Global Disaster Management System</div>
+                <div class="entry-description">
+                    Enterprise platform with ML.NET-powered disaster prediction engine. Includes real-time alerts via SignalR, multi-channel messaging (SMS/WhatsApp/IVR) through Twilio, IoT sensor integration, and emergency shelter management. Deployed with Docker and Kubernetes.
+                </div>
+            </div>
+            
+            <div class="entry">
+                <div class="entry-title">Change Management System</div>
+                <div class="entry-description">
+                    Enterprise web application with role-based authorization, approval workflows, audit trails, and security measures. Built with ASP.NET Core 6 and currently serving real organizational users.
+                </div>
+            </div>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div>
+            <div class="section-title">Education</div>
+            <div class="entry">
+                <div class="entry-title">Bachelor of Science in Computer Science</div>
+                <div class="entry-company">Babcock University, Nigeria</div>
+                <div class="entry-date">2019 - 2023</div>
+            </div>
+        </div>
+
+        <div>
+            <div class="section-title">Certifications</div>
+            <ul class="cert-list">
+                <li>Kubernetes and Cloud Native Associate (KCNA) - Linux Foundation, 2025</li>
+                <li>Microsoft Certified C# Developer - Microsoft, 2023</li>
+                <li>Deloitte Data Analytics Job Simulation - Deloitte, 2025</li>
+                <li>ASP.NET Core Web Development - Udemy, 2023</li>
+                <li>Oracle SQL & Database Administration - New Horizons, 2023</li>
+                <li>CompTIA A+ & Security+ - New Horizons, 2023</li>
+                <li>Java & Android Development - New Horizons, 2023</li>
+            </ul>
         </div>
     </div>
 </body>
