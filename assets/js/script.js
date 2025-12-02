@@ -1,4 +1,11 @@
 // ================================
+// EMAILJS INITIALIZATION
+// ================================
+if (typeof emailjs !== 'undefined') {
+    emailjs.init('bDo5JjM0TI2PpPFhh');
+}
+
+// ================================
 // LOADING SCREEN
 // ================================
 window.addEventListener('load', () => {
