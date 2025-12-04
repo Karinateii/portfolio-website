@@ -4,7 +4,7 @@ A modern, professional portfolio website showcasing my software engineering proj
 
 ## 🚀 Live Demo
 
-Visit the live site: [Coming Soon - Deploy to Vercel]
+Visit the live site: https://portfolio-website-lzs4.vercel.app
 
 ## ✨ Features
 
