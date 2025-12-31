@@ -375,46 +375,39 @@ window.addEventListener('scroll', () => {
 });
 
 // ================================
-// THEME SWITCHER (Optional)
+// THEME SWITCHER
 // ================================
 const createThemeSwitcher = () => {
     const themeToggle = document.createElement('button');
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     themeToggle.className = 'theme-toggle';
-    themeToggle.style.cssText = `
-        position: fixed;
-        bottom: 5rem;
-        right: 2rem;
-        width: 50px;
-        height: 50px;
-        background: var(--bg-secondary);
-        border: 2px solid var(--border-color);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        color: var(--text-primary);
-        cursor: pointer;
-        z-index: 999;
-        transition: var(--transition-normal);
-    `;
+    themeToggle.setAttribute('title', 'Toggle Light/Dark Mode');
+    themeToggle.setAttribute('aria-label', 'Toggle theme');
     
     document.body.appendChild(themeToggle);
+    
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
     
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-theme');
         const icon = themeToggle.querySelector('i');
         if (document.body.classList.contains('light-theme')) {
-            icon.className = 'fas fa-sun';
-        } else {
             icon.className = 'fas fa-moon';
+            localStorage.setItem('theme', 'light');
+        } else {
+            icon.className = 'fas fa-sun';
+            localStorage.setItem('theme', 'dark');
         }
     });
 };
 
-// Uncomment to enable theme switcher
-// createThemeSwitcher();
+// Enable theme switcher
+createThemeSwitcher();
 
 // ================================
 // PERFORMANCE OPTIMIZATION

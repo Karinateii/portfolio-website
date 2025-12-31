@@ -41,6 +41,74 @@
     --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
 }
 
+/* Light Theme */
+body.light-theme {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #e2e8f0;
+    
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+    
+    --border-color: #cbd5e0;
+    --shadow-color: rgba(99, 102, 241, 0.15);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .navbar {
+    background: rgba(248, 250, 252, 0.9);
+}
+
+body.light-theme .navbar.scrolled {
+    background: rgba(248, 250, 252, 0.98);
+}
+
+body.light-theme .code-window {
+    background: #1e293b;
+}
+
+body.light-theme .skill-category,
+body.light-theme .project-card,
+body.light-theme .contact-form-wrapper,
+body.light-theme .sidebar-card,
+body.light-theme .stat-card {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.light-theme #loading-screen {
+    background: var(--bg-primary);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    bottom: 5rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    z-index: 999;
+    transition: var(--transition-normal);
+    box-shadow: var(--shadow-md);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -280,12 +348,10 @@ button {
     margin: 0 auto;
     padding: 0 2rem;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .section {
     padding: var(--section-padding);
-    overflow-x: hidden;
 }
 
 .section-header {
