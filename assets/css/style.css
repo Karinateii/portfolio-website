@@ -26,7 +26,7 @@
     --gradient-accent: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
     
     /* Spacing */
-    --section-padding: 100px 0;
+    --section-padding: 70px 0;
     --container-width: 1200px;
     
     /* Transitions */
@@ -356,7 +356,7 @@ button {
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .section-label {
@@ -950,7 +950,7 @@ button {
 
 /* Tech Icons */
 .tech-icons {
-    margin-top: 4rem;
+    margin-top: 3rem;
     text-align: center;
 }
 
@@ -1018,7 +1018,7 @@ button {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .project-card {
@@ -1058,7 +1058,7 @@ button {
 
 .project-image {
     position: relative;
-    height: 250px;
+    height: 200px;
     background: var(--bg-tertiary);
     overflow: hidden;
 }

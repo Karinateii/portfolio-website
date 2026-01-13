@@ -100,7 +100,15 @@ const animateCounter = (element, target, duration = 2000) => {
 const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const statNumbers = entry.target.querySelectorAll('.stat-number');
+            // Calculate professional experience (from 2023 to now)
+            const profExpElement = document.getElementById('prof-exp');
+            if (profExpElement) {
+                const currentYear = new Date().getFullYear();
+                const profExp = currentYear - 2023;
+                animateCounter(profExpElement, profExp);
+            }
+            
+            const statNumbers = entry.target.querySelectorAll('.stat-number:not(#prof-exp)');
             statNumbers.forEach(stat => {
                 const target = parseInt(stat.getAttribute('data-target'));
                 animateCounter(stat, target);
