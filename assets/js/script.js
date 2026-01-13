@@ -486,3 +486,13 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// ================================
+// DYNAMIC YEAR
+// ================================
+document.addEventListener('DOMContentLoaded', () => {
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
