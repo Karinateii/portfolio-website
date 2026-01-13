@@ -503,4 +503,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
+    
+    // Update experience years in about section
+    const expYearsElement = document.getElementById('exp-years');
+    if (expYearsElement) {
+        const currentYear = new Date().getFullYear();
+        const expYears = currentYear - 2023;
+        expYearsElement.textContent = expYears + '+';
+    }
 });
