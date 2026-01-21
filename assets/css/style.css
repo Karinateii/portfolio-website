@@ -1,6 +1,12 @@
 /* ================================
    CSS VARIABLES & RESET
    ================================ */
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
 :root {
     /* Colors */
     --primary-color: #6366f1;
