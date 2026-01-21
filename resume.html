@@ -183,7 +183,7 @@
         <div>
             <div class="section-title">Professional Summary</div>
             <p class="summary">
-                <strong>Full-stack software engineer</strong> with <strong>2+ years</strong> of proven experience delivering <strong>enterprise-scale solutions</strong>. Expert in <strong>.NET/ASP.NET Core</strong>, cloud infrastructure (<strong>Docker, Kubernetes</strong>), and integrating <strong>AI/ML capabilities</strong> into production systems. Track record of <strong>architecting scalable systems</strong>, implementing <strong>security best practices</strong>, and leading successful project deliveries from concept to deployment. Seeking challenging roles where technical excellence drives business impact.
+                <strong>Full-stack software engineer</strong> with <strong><span id="resume-exp-years">2+</span> years</strong> of proven experience delivering <strong>enterprise-scale solutions</strong>. Expert in <strong>.NET/ASP.NET Core</strong>, cloud infrastructure (<strong>Docker, Kubernetes</strong>), and integrating <strong>AI/ML capabilities</strong> into production systems. Track record of <strong>architecting scalable systems</strong>, implementing <strong>security best practices</strong>, and leading successful project deliveries from concept to deployment. Seeking challenging roles where technical excellence drives business impact.
             </p>
         </div>
 
@@ -345,5 +345,17 @@
             </ul>
         </div>
     </div>
+
+    <script>
+        // Dynamically calculate years of experience
+        document.addEventListener('DOMContentLoaded', function() {
+            const expElement = document.getElementById('resume-exp-years');
+            if (expElement) {
+                const currentYear = new Date().getFullYear();
+                const yearsExp = currentYear - 2023;
+                expElement.textContent = yearsExp + '+';
+            }
+        });
+    </script>
 </body>
 </html>
